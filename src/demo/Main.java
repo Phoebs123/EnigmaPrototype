@@ -24,7 +24,8 @@ public class Main {
     }
 
     char talTilBogstav (char c) {
-        char bogstav = (char) intTilChar;
+        String alfabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
+        char bogstav = alfabet.charAt(intTilChar);
         return bogstav;
 
     }
