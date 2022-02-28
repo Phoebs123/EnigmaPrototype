@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     Scanner in = new Scanner(System.in);
+    String alfabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
     char charTilInt, c;
     int intTilChar, i;
 
@@ -13,7 +14,6 @@ public class Main {
 
 
     int bogstavTilTal (int i) {
-        String alfabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
         int tal = alfabet.indexOf(charTilInt);
         return tal;
     }
@@ -24,7 +24,6 @@ public class Main {
     }
 
     char talTilBogstav (char c) {
-        String alfabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
         char bogstav = alfabet.charAt(intTilChar);
         return bogstav;
 
@@ -35,16 +34,11 @@ public class Main {
         int intTal = bogstavTilTal(i);
         inputTal();
         char charBogstav = talTilBogstav(c);
-        System.out.println(intTal);
-        System.out.println(Character.toUpperCase(charBogstav));
-        //koder - return begge . uppercase
+        //System.out.println(intTal);
+        //System.out.println(Character.toUpperCase(charBogstav));
     }
 
     public static void main(String[] args) {
         new Main().go();
-	// konvertere bogstav til tal (skal modtage char og returnere int)
-        // og tal til bogstaver (skal modtage int og returnere char). char(store bogstaver) og int
-        //mellemrum = 0. Char ' ' = 0; A = 1, Å = 29. (index of)
-
     }
 }
